@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/codigo.js"></script>
+    <script src="js/class.js"></script>
+    <link rel = "stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Login -->
+    <div id="mnuLogin">
+        <input type="text" id="txtUserLogin" placeholder="Usuario"><br>
+        <input type="password" id="txtPassLogin" placeholder="Contraseña"><br>
+        <input type="button" id="btnLogin" value="Login">
+        <p id="msjLogin"></p>
+    </div>
+
+    
+    <!-- Registrarse -->
+    <div id="mnuRegistrar">
+        <input type="text" id="txtNameRegis" placeholder="Nombre"><br>
+        <input type="text" id="txtUserRegis" placeholder="Usuario"><br>
+        <input type="text" id="txtPassRegis" placeholder="Contraseña"><br>
+        <input type="button" id="btnRegis" value="Registrarse">
+        <p id="msjRegis"></p>
+    </div>
+
+
+<!----------------------------- LOCAL -------------------------------->
+    <!-- Menu Local -->
+  <div id="cabezal" class="clearfix">
+        <ul id="mnuLocal">
+          <li>
+            <a id="disponibilidad">Disponibilidad</a>
+          </li>
+          <li>
+            <a id="estadoReservas">Ver estado de reservas</a>
+          </li>
+          <li>
+            <a id="cupoMaximo">Cupo maximo</a>
+          </li>
+          <li>
+            <a id="infoEstadisticaLocales">Informacion estadistica</a>
+          </li>
+          <li>
+            <a id="cerrarSesionL">Cerrar sesion</a>
+          </li>
+        </ul>
+  </div>
+
+    <div id="mnuDisponibilidad">
+      <h3>Habilitar o Deshabilitar el local</h3>
+      <h6>ATENCION: Si se llenan los cupos hasta el cupo maximo no se podra volver a habilitar el local</h6>
+      <input type="button" value="Habilitar" id="btnHabilitar">
+      <input type="button" value="Deshabilitar" id="btnDeshabilitar">
+      <p id="msjDisponibilidad">Local Habilitado</p>
+    </div>
+
+    <div id="mnuEstadoReservas">
+      <h3>Cambiar el estado de una reserva</h3>
+      <input type="text" id="txtBuscarNombre" placeholder="Nombre a buscar">
+      <input type="button" id="btnBuscar" value="buscar"><br><br>
+      <p id="msjBusqueda"></p>
+      <select id="sctReservaACambiar"></select>
+      <input type="button" value="Finalizar" id="btnFinalizar">
+      <p id="msjEstadoReservas"></p>
+    </div>
+
+    <div id="mnuCupoMaximo">
+      <h3>Cambiar cupo maximo</h3>
+      <p id="msjCupoMaximoActual"></p>
+      <input type="number" id="txtCupoMaximoNuevo" placeholder="Digitar nuevo cupo maximo">
+      <input type="button" value="Cambiar" id="btnCambiarCupoMaximo">
+      <p id="msjCupoMaximo"></p>
+    </div>
+
+    <div id="mnuInfoEstadisticaLocales">
+      <h3>Informacion Estadistica</h3>
+      <p id="porcentajeOcupacion"></p>
+      <p id="promedioCalificacion"></p>
+
+      <div id="tablaCalificaciones">
+      </div>
+
+      <p id="reservasPendientesLocal"></p>
+      <p id="reservasFinalizadasLocal"></p>
+
+    </div>
+
+
+
+<!----------------------------- PERSONA -------------------------------->
+
+    <!-- Menu Persona -->
+
+  <div id="cabezal" class="clearfix">
+    <div>
+        <ul id="mnuPersona">
+        
+          <li>
+            <a id="solicitarReserva">Solicitar reserva</a>
+          </li>
+          <li>
+            <a id="calificarReserva">Calificar reserva</a>
+          </li>
+          <li>
+            <a id="reservasPendientes">Reservas pendientes</a>
+          </li>
+          <li>
+            <a id="infoEstadisticaPersonas">Informacion estadistica</a>
+          </li>
+          <li>
+            <a id="cerrarSesionP">Cerrar sesion</a>
+          </li>
+        </ul>
+    </div>
+  </div>
+
+  <div id="mnuSolicitarReserva">
+    <h3>Solicitar una reserva</h3>
+    <select id="sctLocalAReservar"></select>
+    <input type="number" id="txtCantidadAReservar" placeholder="Cantidad de cupos a reservar">
+    <input type="button" id="btnReservar" value="Solicitar reserva">
+    <p id="msjReserva"></p>
+
+    <hr>
+    <h3>Cancelar una reserva</h3>
+    <h6>Listado de reservas pendientes</h6>
+    <select id="sctLocalACancelar"></select>
+    <input type="button" id="btnCancelarReserva" value="Cancelar reserva">
+    <p id="msjCancelarReserva"></p>
+  </div>
+
+  <div id="mnuCalificarReserva">
+    <h3>Calificar una reserva finalizada</h3>
+    <h5>Digitar una calificacion entre 1 y 5</h5>
+    <select id="sctLocalACalificar"></select>
+    <input type="number" id="txtCalificacion" placeholder="Calificacion">
+    <input type="button" id="btnCalificar" value="Calificar">
+    <p id="msjAgregarCalificacion"></p>
+  </div>
+
+  <div id="mnuReservasPendientes">
+    <h1>Reservas Pendientes</h1>
+    <div id="lstReservasPendientes">
+
+    </div>
+    <p id="msjReservasPendientes"></p>
+  </div>
+
+  <div id="mnuInfoEstadisticaPersonas">
+    <h3>Informacion Estadistica</h3>
+    <div id="tablaReservas">
+    </div>
+    <p id="mayorQReservas"></p>
+  </div>
+
+</body>
+</html>
